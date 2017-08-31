@@ -1,0 +1,35 @@
+//Questao 1
+
+#include <stdio.h>
+#include <math.h>
+
+float soma(int n, int x);
+int fat(int n);
+
+int main(int argc, char* argv){
+
+	printf("Valor = %f\n", soma(5, 4));
+
+	return 0;
+}
+
+int fat(int n){
+	
+	if(n == 1){
+		return 1;
+	}else{
+		return fat(n-1);
+	}
+}
+
+float soma(int n, int x){
+	
+	float soma = 1.0;
+	
+	for(int i = 1; i < n; i++){
+		soma += pow(x,i)/fat(i);
+	
+	}
+
+	return soma;
+}
