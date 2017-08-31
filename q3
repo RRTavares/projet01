@@ -1,0 +1,27 @@
+//Questao 3
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int DiferencaVetor(int*v, int n);
+
+int main(void){
+	int n, i, *v;
+	
+	printf("Digite o numero de elementos do vetor: ");
+	scanf("%d",&n);
+	
+	v = (int*)malloc(n * sizeof(int));
+	
+	for(i=0; i < n;i++){
+		printf("\nDigite o valor de v[%i]: ",i);
+		scanf("%i",&v[i]);
+	}
+	
+	//DiferencaVetor(v, n);
+	
+	//printf("A maior diferenca eh de %d",v[n]);
+
+	free(v);
+	return 0;
+}
